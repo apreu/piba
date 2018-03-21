@@ -50,7 +50,7 @@ export class HomePage {
   public isLoggedIn: boolean;
   constructor(public navCtrl: NavController, public sessionService: SessionService) {
     this.isLoggedIn = this.sessionService.isLoggedIn();
-  	//if(!a) this.navCtrl.setRoot(LoginPage);
+  	if(!this.isLoggedIn) this.navCtrl.setRoot(LoginPage);
   }
   push(page) {
     this.navCtrl.push(page);

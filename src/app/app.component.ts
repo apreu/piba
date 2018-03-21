@@ -3,6 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
 import { HomePage, SessionService } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
@@ -52,6 +53,7 @@ export class MyApp {
     ];
 
   }
+  
   /*this.firebase.getToken()
     .then(token => console.log(`The token is ${token}`)) // save the token server-side and use it to push notifications to this device
     .catch(error => console.error('Error getting token', error));
@@ -79,4 +81,5 @@ export class MyApp {
   menuResultadosHandler(): void {
     this.showSubmenuR = !this.showSubmenuR;
   }
+  
 }

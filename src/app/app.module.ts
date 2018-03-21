@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { OneSignal } from '@ionic-native/onesignal';
 
 import { MyApp } from './app.component';
 import { HomePage, SessionService } from '../pages/home/home';
@@ -79,6 +80,7 @@ import { ModalLoginPage } from '../pages/login/modal-login.component';
     GoogleMaps,
     Geolocation,
     InAppBrowser,
+    OneSignal,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
