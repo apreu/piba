@@ -1,0 +1,65 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list id="sidenav">
+      <!--<button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" [style.padding-left]="p.margin">
+        <ion-icon [name]="p.icono"></ion-icon>
+        {{p.title}}
+      </button>-->
+
+      <ion-item menuClose (click)="openPage(0)">
+        <ion-avatar item-start>
+          <img src="assets/icon/icon1.png">
+        </ion-avatar>
+        Inicio
+      </ion-item>
+      <ion-item *ngIf="isLoggedIn" (click)="menuConcursosHandler()">
+        <ion-avatar item-start>
+          <img src="assets/icon/icon2.png">
+        </ion-avatar>Concursos</ion-item>
+      <ion-item-group *ngIf="isLoggedIn" submenu [class.visible]="showSubmenuC">
+        <ion-item menuClose submenu-item (click)="openPage(1)">Todos</ion-item>
+        <ion-item menuClose submenu-item (click)="openPage(10)">Robótica</ion-item>
+      </ion-item-group>
+      <ion-item *ngIf="isLoggedIn" (click)="menuResultadosHandler()">
+        <ion-avatar item-start>
+          <img src="assets/icon/icon3.png">
+        </ion-avatar>Resultados</ion-item>
+      <ion-item-group *ngIf="isLoggedIn" submenu [class.visible]="showSubmenuR">
+        <ion-item menuClose submenu-item (click)="openPage(3)">Todos</ion-item>
+        <ion-item menuClose submenu-item (click)="openPage(2)">Robótica</ion-item>
+      </ion-item-group>
+      <ion-item *ngIf="isLoggedIn" menuClose (click)="openPage(4)">
+        <ion-avatar item-start>
+          <img src="assets/icon/icon4.png">
+        </ion-avatar>
+        Mapa
+      </ion-item>
+      <ion-item menuClose (click)="openPage(5)">
+        <ion-avatar item-start>
+          <img src="assets/icon/icon5.png">
+        </ion-avatar>Mística</ion-item>
+      <ion-item menuClose (click)="openPage(6)">
+        <ion-avatar item-start>
+          <img src="assets/icon/icon6.png">
+        </ion-avatar>Anáhuac</ion-item>
+      <ion-item menuClose (click)="openPage(8)">
+        <ion-avatar item-start>
+          <img src="assets/icon/icon2.png">
+        </ion-avatar>Test OV</ion-item>
+      <ion-item menuClose (click)="openPage(9)">
+        <ion-avatar item-start>
+          <img src="assets/icon/icon3.png">
+        </ion-avatar>Emergencias</ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

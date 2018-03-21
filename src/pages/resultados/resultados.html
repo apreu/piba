@@ -1,0 +1,29 @@
+<!--
+  Generated template for the ConcursosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+	<ion-navbar>
+	  <button ion-button menuToggle>
+		<ion-icon name="menu"></ion-icon>
+	  </button>
+	  <ion-title>Resultados</ion-title>
+	</ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content>
+	  <ion-grid>
+		<ion-row>
+		  <ion-col col-6 ion-item *ngFor="let c of concursos"> 
+			  <ion-card class="card-background-page" (click)="irAConcurso($event,c)">
+			  <img src="assets/imgs/{{c.icono}}"/>
+			  </ion-card>
+		  </ion-col>
+		</ion-row>
+	  </ion-grid>
+  
+  </ion-content>
+  

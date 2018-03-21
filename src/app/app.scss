@@ -1,0 +1,57 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+#sidenav {
+  ion-item-group {
+    overflow: hidden;
+    display: block;
+    height: 0;
+    transition: height .3s linear;
+    &.visible {
+        height: auto;
+        // this is just sample value, calculate how much space you need for your menu items
+    }
+    ion-item{
+    	padding-left:30px;
+        color: #FFF;
+        background-color: #00263E;
+    }
+  }
+}
+.menu-inner{
+	width:210px;
+}
+.item-md ion-avatar{
+  min-width: 30px;
+  min-height: 30px;
+}
+.item-md ion-avatar ion-img, .item-md ion-avatar img{
+  border-radius: 0%;
+  width: 30px;
+  height: 30px;
+}
+.button-default{
+  background-color: #00263e;
+}
+.toolbar-title-md{
+  color: #FFF !important;
+}
+.bar-button-default-md{
+  color: #ff004a !important;
+}
+.toolbar-background-md{
+  background: #00263e !important;
+}

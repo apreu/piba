@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Inicio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-card>
+    <img src="assets/icon/anahuaclogo.jpg">
+  </ion-card>
+
+  <ion-card [navPush]="concursosPage" *ngIf="isLoggedIn">
+    <img src="assets/icon/cuadro5.jpg">
+  </ion-card>
+  <ion-card [navPush]="resultadosPage" *ngIf="isLoggedIn">
+    <img src="assets/icon/cuadro4.png">
+  </ion-card>
+  <ion-card [navPush]="mapaPage">
+    <img src="assets/icon/cuadro3.jpg" *ngIf="isLoggedIn">
+  </ion-card>
+  <ion-card [navPush]="misticaPage">
+    <img src="assets/icon/cuadro1.jpg">
+  </ion-card>
+  <ion-card [navPush]="anahuacPage">
+    <img src="assets/icon/cuadro2.png">
+  </ion-card>
+  <ion-card [navPush]="testovPage">
+    <img src="assets/icon/testov.png">
+  </ion-card>
+  <ion-card [navPush]="loginPage">
+    <img src="assets/icon/cuadro6.jpg" *ngIf="!isLoggedIn">
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2 offset-4>
+        <ion-card (click)="navigate('https://www.facebook.com/pibalat/')">
+          <img src="assets/imgs/face.png">
+        </ion-card>
+      </ion-col>
+      <ion-col col-2>
+        <ion-card (click)="navigate('https://www.instagram.com/piba_lat/')">
+          <img src="assets/imgs/insta.png">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

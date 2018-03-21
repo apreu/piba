@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>RESULTADOS</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{detalleConcurso.concurso}}
+      </ion-card-title>
+
+      <div padding>
+        <ion-segment [(ngModel)]="diaConcurso">
+          <ion-segment-button (click)="irAConcurso($event,'viernes')" value="VIERNES">
+            VIERNES
+          </ion-segment-button>
+
+          <ion-segment-button (click)="irAConcurso($event,'sabado')" value="SABADO">
+            SÁBADO
+          </ion-segment-button>
+
+          <ion-segment-button (click)="irAConcurso($event,'domingo')" value="DOMINGO">
+            DOMINGO
+          </ion-segment-button>
+
+        </ion-segment>
+      </div>
+
+      <div>
+        <ion-list>
+          <ion-item *ngFor="let dia of concursoFecha">
+            <p>Colegio: {{dia.colegio}}</p>
+
+            <p>Nombre: {{dia.nombre}}</p>
+
+            <p>Resultado: {{dia.resultado1}}</p>
+
+          </ion-item>
+
+        </ion-list>
+      </div>

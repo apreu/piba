@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Anáhuac</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+<ion-card>
+  <ion-card-content>
+    <ion-card-title>
+    Información Anáhuac
+      </ion-card-title>
+  
+<ion-card>
+  
+    <ion-card-header>
+        Oferta Académica
+      </ion-card-header>
+  <img src="assets/imgs/anahuac.jpg"/>
+  <ion-card-content>
+    
+    <p>
+        Nuestra nueva estructura ofrece una sólida formación humana y en estudios generales además de la adquisición de los conocimientos y competencias de cada profesión
+    </p>
+    <button ion-button full color="elmo" (click)="navigate('https://www.anahuac.mx/rua/licenciaturas')">VER OFERTA ACADÉMICA</button>
+   
+  </ion-card-content>
+</ion-card>
+<ion-card>
+  
+  
+
+  <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/check.png">
+      </ion-thumbnail>
+      <h2>  Proceso de Admisión</h2>
+    </ion-item>
+  <ion-card-content>
+    
+      <div padding>
+          <h3>PASOS: </h3>
+          <ion-segment [(ngModel)]="pet">
+            <ion-segment-button value="1">
+                <img src="assets/imgs/uno.png">
+            </ion-segment-button>
+            <ion-segment-button value="2">
+                <img src="assets/imgs/dos.png">
+            </ion-segment-button>
+            <ion-segment-button value="3">
+                <img src="assets/imgs/tres.png">
+              </ion-segment-button>
+              <ion-segment-button value="4">
+                  <img src="assets/imgs/cuatro.png">
+                 </ion-segment-button>
+                 <ion-segment-button value="5">
+                    <img src="assets/imgs/cinco.png">
+                   </ion-segment-button>
+          </ion-segment>
+        </div>
+        
+        <div [ngSwitch]="pet">
+       
+        
+          <ion-list *ngSwitchCase="'1'">
+            <p>Documentos para examen de admisión: Solicitud de admisión, copia de acta de nacimiento, certificado de preparatoria, recibo de teléfono, 4 fotos infantiles, pago de examen. </p>
+          </ion-list>
+          <ion-list *ngSwitchCase="'2'">
+              <p>Elige una fecha de examen<br>
+
+<button ion-button full color="elmo" (click)="navigate('https://www.anahuac.mx/mexico/preuniversitarios/fechas-de-examen-de-admision/')">FECHAS PARA CAMPUS NORTE</button>  
+<button ion-button full color="elmo" (click)="navigate('http://ww2.anahuac.mx/foraneos/preuniversitarios/#ciudad')">FECHAS EN TU CIUDAD</button>
+               
+              </p>
+            </ion-list>
+            <ion-list *ngSwitchCase="'3'">
+              <p>Acudir al departamento de admisiones y entregar documentación e inscribirse al examen. (Costo del Exámen $1,300)</p>
+              </ion-list>
+              <ion-list *ngSwitchCase="'4'">
+                  <p>Asiste con puntualidad en la fecha y la hora señaladas. No olvides tu credencial provisional para ingresar a la Universidad, el examen consta de tres días de pruebas; College Board, Examen de orientación vocacional y clasificación, Entrevista</p>
+                </ion-list>
+
+                <ion-list *ngSwitchCase="'5'">
+                    <p>
+                 
+                        Consulta la página de fechas de examen de admisión en la que podrás recoger tus resultados.
+
+                        Los alumnos que hayan aplicado para la carrera de Médico Cirujano deberán hacer el Curso Propedéutico para completar el proceso de admisión.
+                    </p>
+                
+                </ion-list>
+        </div>
+        <button ion-button full color="elmo" (click)="navigate('https://www.anahuac.mx/mexico/preuniversitarios/wp-content/uploads/2016/05/SolicitudAdmisionAnahuac1.pdf')">SOLICITUD DE ADMISIÓN</button>
+   
+  </ion-card-content>
+</ion-card>
+
+
+<ion-card>
+  
+    <ion-card-header>
+        BECAS Y CRÉDITO EDUCATIVO
+      </ion-card-header>
+  <img src="assets/imgs/becas.jpg"/>
+  <ion-card-content>
+    
+    <p align="justify">
+        Conforme a su misión educativa, la Universidad Anáhuac apoya a estudiantes con capacidad para desarrollar el perfil de excelencia humana y profesional, sin que el factor económico sea un impedimento para lograrlo.
+   </p>
+    <button ion-button full color="elmo" (click)="navigate('http://pegaso.anahuac.mx/contenidos/archivos/solicitud_beca.pdf')">SOLICITUD DE BECA</button>
+    <button ion-button full color="elmoscuro" (click)="navigate('https://www.anahuac.mx/mexico/preuniversitarios/becas/')">MÁS INFORMACIÓN</button>
+   
+  </ion-card-content>
+</ion-card>
+
+  
+  </ion-card-content>
+</ion-card>
+</ion-content>
