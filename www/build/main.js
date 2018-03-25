@@ -197,11 +197,11 @@ webpackEmptyAsyncContext.id = 126;
 
 var map = {
 	"../pages/about/about.module": [
-		296,
+		297,
 		0
 	],
 	"../pages/anahuac/anahuac.module": [
-		297,
+		296,
 		10
 	],
 	"../pages/concursodet/concursodet.module": [
@@ -217,15 +217,15 @@ var map = {
 		7
 	],
 	"../pages/mapa/mapa.module": [
-		301,
+		303,
 		6
 	],
 	"../pages/mistica/mistica.module": [
-		302,
+		301,
 		5
 	],
 	"../pages/resultadodet/resultadodet.module": [
-		303,
+		302,
 		4
 	],
 	"../pages/roboticacon/roboticacon.module": [
@@ -363,14 +363,14 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/anahuac/anahuac.module#AnahuacPageModule', name: 'AnahuacPage', segment: 'anahuac', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/concursodet/concursodet.module#ConcursodetPageModule', name: 'ConcursodetPage', segment: 'concursodet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/emergencias/emergencias.module#EmergenciasPageModule', name: 'EmergenciasPage', segment: 'emergencias', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mapa/mapa.module#MapaPageModule', name: 'MapaPage', segment: 'mapa', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mistica/mistica.module#MisticaPageModule', name: 'MisticaPage', segment: 'mistica', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/resultadodet/resultadodet.module#ResultadodetPageModule', name: 'ResultadodetPage', segment: 'resultadodet', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mapa/mapa.module#MapaPageModule', name: 'MapaPage', segment: 'mapa', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/roboticacon/roboticacon.module#RoboticaconPageModule', name: 'RoboticaconPage', segment: 'roboticacon', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/roboticares/roboticares.module#RoboticaresPageModule', name: 'RoboticaresPage', segment: 'roboticares', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/testov/testov.module#TestovPageModule', name: 'TestovPage', segment: 'testov', priority: 'low', defaultHistory: [] }
@@ -1349,8 +1349,7 @@ var HomePage = (function () {
         this.loginPage = __WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */];
         this.mapaPage = __WEBPACK_IMPORTED_MODULE_10__mapa_mapa__["a" /* MapaPage */];
         this.isLoggedIn = this.sessionService.isLoggedIn();
-        if (!this.isLoggedIn)
-            this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
+        //if(!this.isLoggedIn) this.navCtrl.setRoot(LoginPage);
     }
     HomePage.prototype.push = function (page) {
         this.navCtrl.push(page);
@@ -1360,7 +1359,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/macbookpro/piba/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Inicio</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page">\n  <ion-card>\n    <img src="assets/icon/anahuaclogo.jpg">\n  </ion-card>\n\n  <ion-card [navPush]="concursosPage" *ngIf="isLoggedIn">\n    <img src="assets/icon/cuadro5.jpg">\n  </ion-card>\n  <ion-card [navPush]="resultadosPage" *ngIf="isLoggedIn">\n    <img src="assets/icon/cuadro4.png">\n  </ion-card>\n  <ion-card [navPush]="mapaPage">\n    <img src="assets/icon/cuadro3.jpg" *ngIf="isLoggedIn">\n  </ion-card>\n  <ion-card [navPush]="misticaPage">\n    <img src="assets/icon/cuadro1.jpg">\n  </ion-card>\n  <ion-card [navPush]="anahuacPage">\n    <img src="assets/icon/cuadro2.png">\n  </ion-card>\n  <ion-card [navPush]="testovPage">\n    <img src="assets/icon/testov.png">\n  </ion-card>\n  <ion-card [navPush]="loginPage">\n    <img src="assets/icon/inicio.png" *ngIf="!isLoggedIn">\n  </ion-card>\n  <ion-grid>\n    <ion-row>\n      <ion-col col-2 offset-4>\n        <ion-card (click)="navigate(\'https://www.facebook.com/pibalat/\')">\n          <img src="assets/imgs/face.png">\n        </ion-card>\n      </ion-col>\n      <ion-col col-2>\n        <ion-card (click)="navigate(\'https://www.instagram.com/piba_lat/\')">\n          <img src="assets/imgs/insta.png">\n        </ion-card>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/macbookpro/piba/src/pages/home/home.html"*/,
+            selector: 'page-home',template:/*ion-inline-start:"/Users/macbookpro/piba/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Inicio</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page">\n  <ion-card>\n    <img src="assets/icon/anahuaclogo.jpg">\n  </ion-card>\n\n  <ion-item-divider  [navPush]="loginPage" color="light" text-center *ngIf="!isLoggedIn">\n    Para ver los horarios y resultados <br> es necesario registrarse:\n    <button ion-button block>Registrarse aquí </button>  \n  </ion-item-divider>\n  <ion-card [navPush]="loginPage">\n    <img src="assets/icon/inicio.png" *ngIf="!isLoggedIn">\n  </ion-card>\n\n  <ion-card [navPush]="concursosPage" *ngIf="isLoggedIn">\n    <img src="assets/icon/cuadro5.jpg">\n  </ion-card>\n  <ion-card [navPush]="resultadosPage" *ngIf="isLoggedIn">\n    <img src="assets/icon/cuadro4.png">\n  </ion-card>\n  <ion-card [navPush]="mapaPage">\n    <img src="assets/icon/cuadro3.jpg" *ngIf="isLoggedIn">\n  </ion-card>\n  <ion-card [navPush]="misticaPage">\n    <img src="assets/icon/cuadro1.jpg">\n  </ion-card>\n  <ion-card [navPush]="anahuacPage">\n    <img src="assets/icon/cuadro2.png">\n  </ion-card>\n  <ion-card [navPush]="testovPage">\n    <img src="assets/icon/testov.png">\n  </ion-card>\n  <ion-grid>\n    <ion-row>\n      <ion-col col-2 offset-4>\n        <ion-card (click)="navigate(\'https://www.facebook.com/pibalat/\')">\n          <img src="assets/imgs/face.png">\n        </ion-card>\n      </ion-col>\n      <ion-col col-2>\n        <ion-card (click)="navigate(\'https://www.instagram.com/piba_lat/\')">\n          <img src="assets/imgs/insta.png">\n        </ion-card>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/macbookpro/piba/src/pages/home/home.html"*/,
             providers: [SessionService]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], SessionService])

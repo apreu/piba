@@ -12,6 +12,14 @@
     <img src="assets/icon/anahuaclogo.jpg">
   </ion-card>
 
+  <ion-item-divider  [navPush]="loginPage" color="light" text-center *ngIf="!isLoggedIn">
+    Para ver los horarios y resultados <br> es necesario registrarse:
+    <button ion-button block>Registrarse aquí </button>  
+  </ion-item-divider>
+  <ion-card [navPush]="loginPage">
+    <img src="assets/icon/inicio.png" *ngIf="!isLoggedIn">
+  </ion-card>
+
   <ion-card [navPush]="concursosPage" *ngIf="isLoggedIn">
     <img src="assets/icon/cuadro5.jpg">
   </ion-card>
@@ -29,9 +37,6 @@
   </ion-card>
   <ion-card [navPush]="testovPage">
     <img src="assets/icon/testov.png">
-  </ion-card>
-  <ion-card [navPush]="loginPage">
-    <img src="assets/icon/inicio.png" *ngIf="!isLoggedIn">
   </ion-card>
   <ion-grid>
     <ion-row>
